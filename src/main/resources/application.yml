@@ -1,0 +1,8 @@
+annotations-app:
+  task:
+    cron: "0/20 * * * * ?" # execute task every 20 seconds
+  persistence:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1
+    username: db-user
+    password: db-pw
