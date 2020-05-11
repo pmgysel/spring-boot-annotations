@@ -18,7 +18,7 @@ WeatherRJ data object:
   "temperature": Int
 }
 
-Moreover, there is a background task calculating the average temperature of all weather data. This task runs every 20 seconds.
+Moreover, this app performs a regular background task, calculating the average temperature of all weather data. This task runs every 20 seconds.
 
 ## Run the app yourself
 
@@ -26,17 +26,18 @@ Prerequisites:
 * Java 8 JDK
 * Maven
 * Git
-* Postman or curl
+* curl
 
 Download the code and run the app:
 
 ```bash
-git clone <this git url>
+git clone https://github.com/pmgysel/spring-boot-annotations.git
+cd spring-boot-annotations
 mvn clean install
 java -jar target/spring-boot-annotations-0.0.1-SNAPSHOT.jar
 ```
 
-Now you can create and read weather data using the exposed REST endpoints. For this purpose, you can use [curl](https://curl.haxx.se/download.html) on the command line or if you prefer a GUI, you can use [Postman](https://www.postman.com/downloads/).
+Now you can create and read weather data using the exposed REST endpoints.
 
 curl on Linux:
 
@@ -56,7 +57,7 @@ curl -X GET http://localhost:8080/api/weather/zurich
 
 The following frameworks and libraries were used:
 * Spring Boot
-* H2 data base
+* H2 database
 * Spring-Data-JPA
 * Spring-Web
 * Java 8
